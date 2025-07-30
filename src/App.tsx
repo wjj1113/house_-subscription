@@ -74,22 +74,6 @@ function App() {
           <h3 className="font-bold text-lg mb-2">전략 시뮬레이터</h3>
           <p className="text-gray-600 text-sm">가점 기반 맞춤 전략</p>
         </div>
-        
-        <div 
-          className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl cursor-pointer hover:shadow-lg transition-all"
-        >
-          <MessageCircle className="text-purple-600 mb-3" size={32} />
-          <h3 className="font-bold text-lg mb-2">챗봇 상담</h3>
-          <p className="text-gray-600 text-sm">AI가 추천하는 전략</p>
-        </div>
-        
-        <div 
-          className="bg-gradient-to-br from-pink-50 to-pink-100 p-6 rounded-xl cursor-pointer hover:shadow-lg transition-all"
-        >
-          <Heart className="text-pink-600 mb-3" size={32} />
-          <h3 className="font-bold text-lg mb-2">공감 콘텐츠</h3>
-          <p className="text-gray-600 text-sm">같은 고민하는 분들의 이야기</p>
-        </div>
       </div>
 
       {userPoints && (
