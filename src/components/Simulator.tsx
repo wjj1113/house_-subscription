@@ -1,5 +1,15 @@
 import React, { useState } from 'react';
-import { Target, MapPin, TrendingUp, Star, ChevronRight, Award, Users, Calendar } from 'lucide-react';
+import { 
+  Target, 
+  TrendingUp, 
+  Users, 
+  MapPin, 
+  Star, 
+  ChevronRight, 
+  Bookmark,
+  Award,
+  Info
+} from 'lucide-react';
 import { Strategy, SimulationResult, PointCalculationInput } from '../types';
 import { runSimulation, getDifficultyColor, getSuccessRateColor } from '../utils/simulator';
 

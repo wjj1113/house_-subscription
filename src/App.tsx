@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
-import { Home, Calculator, Target, MessageCircle, Heart, Calendar, ChevronRight, Star, TrendingUp, Users, MapPin, Award, Bookmark } from 'lucide-react';
-import { PointBreakdown, PointGrade, PointCalculationInput } from './types';
+import { 
+  Calculator, 
+  Target, 
+  Award, 
+  Home, 
+  BarChart3, 
+  Settings 
+} from 'lucide-react';
 import PointCalculator from './components/PointCalculator';
-import Simulator from './components/Simulator';
 import PointChart from './components/PointChart';
-import { Container, Card, Title, Button, Flex, Alert } from './components/styled/CommonStyles';
+import Simulator from './components/Simulator';
+import { PointCalculationInput, PointGrade, PointBreakdown } from './types';
+import { getPointGrade } from './utils/pointCalculator';
 import './App.css';
 
 function App() {
@@ -167,9 +174,9 @@ function App() {
                 <Simulator userPoints={userPoints} userInput={userInput} />
               </>
             ) : (
-              <Alert type="error">
-                가점 계산을 먼저 완료해주세요.
-              </Alert>
+              <div className="bg-red-50 border border-red-200 rounded-lg p-4 text-center">
+                <p className="text-red-600">가점 계산을 먼저 완료해주세요.</p>
+              </div>
             )}
           </>
         )}
