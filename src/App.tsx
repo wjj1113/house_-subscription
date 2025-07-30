@@ -3,23 +3,20 @@ import {
   Calculator, 
   Target, 
   Award, 
-  Home, 
-  BarChart3, 
-  Settings 
+  Home
 } from 'lucide-react';
 import PointCalculator from './components/PointCalculator';
 import PointChart from './components/PointChart';
 import Simulator from './components/Simulator';
 import { PointCalculationInput, PointGrade, PointBreakdown } from './types';
-import { getPointGrade } from './utils/pointCalculator';
 import './App.css';
 
 function App() {
   const [currentStep, setCurrentStep] = useState<'home' | 'calculator' | 'simulator'>('home');
   const [userPoints, setUserPoints] = useState<number | null>(null);
-  const [userInput, setUserInput] = useState<PointCalculationInput | null>(null);
   const [breakdown, setBreakdown] = useState<PointBreakdown | null>(null);
   const [grade, setGrade] = useState<PointGrade | null>(null);
+  const [userInput, setUserInput] = useState<PointCalculationInput | null>(null);
 
   const handleCalculate = (calculatedBreakdown: PointBreakdown, calculatedGrade: PointGrade, userInputData: PointCalculationInput) => {
     setBreakdown(calculatedBreakdown);
@@ -42,11 +39,11 @@ function App() {
 
   const NavButton = ({ icon: Icon, label, step, active }: { icon: any; label: string; step: string; active: boolean }) => (
     <button
-      onClick={() => setCurrentStep(step as any)}
-      className={`flex flex-col items-center p-3 rounded-lg transition-all ${
+      onClick={() => setCurrentStep(step as 'home' | 'calculator' | 'simulator')}
+      className={`flex flex-col items-center py-2 px-3 rounded-lg transition-colors ${
         active 
-          ? 'bg-blue-500 text-white shadow-lg' 
-          : 'text-gray-600 hover:bg-gray-100'
+          ? 'text-blue-600 bg-blue-50' 
+          : 'text-gray-500 hover:text-gray-700'
       }`}
     >
       <Icon size={20} />

@@ -6,9 +6,7 @@ import {
   MapPin, 
   Star, 
   ChevronRight, 
-  Bookmark,
-  Award,
-  Info
+  Award
 } from 'lucide-react';
 import { Strategy, SimulationResult, PointCalculationInput } from '../types';
 import { runSimulation, getDifficultyColor, getSuccessRateColor } from '../utils/simulator';
