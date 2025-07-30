@@ -1,6 +1,7 @@
 {
   "name": "hana-subscription-calculator",
   "version": "0.1.0",
+  "homepage": "https://wjj1113.github.io/house_-subscription",
   "private": true,
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
