@@ -29,14 +29,6 @@ function App() {
     setCurrentStep('simulator');
   };
 
-  const handleBackToCalculator = () => {
-    setCurrentStep('calculator');
-  };
-
-  const handleBackToHome = () => {
-    setCurrentStep('home');
-  };
-
   const NavButton = ({ icon: Icon, label, step, active }: { icon: any; label: string; step: string; active: boolean }) => (
     <button
       onClick={() => setCurrentStep(step as 'home' | 'calculator' | 'simulator')}
